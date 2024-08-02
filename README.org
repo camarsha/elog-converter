@@ -1,4 +1,4 @@
-#+title: ~elog-convert~
+#+title: ~elog-converter~
 #+author: Caleb Marshall
 
 * Purpose
