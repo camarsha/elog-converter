@@ -105,12 +105,12 @@ fn main() {
     };
 
     // print the header
-    println!("{:?}", field_printer(&fields));
+    println!("{}", field_printer(&fields));
     for key in keys {
         let maybe_entry = logbook.entries.get(&key);
         if let Some(e) = maybe_entry {
             let vals: Vec<String> = fields.iter().map(|f| e.get_msg_field(f)).collect();
-            println!("{:?}", field_printer(&vals));
+            println!("{}", field_printer(&vals));
         }
     }
 }

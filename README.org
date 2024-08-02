@@ -1,0 +1,17 @@
+#+title: ~elog-convert~
+#+author: Caleb Marshall
+
+* Purpose
+Right now this is a simple tool to convert elog entries to csv format. Features will be added as the need arises.
+
+* Use
+Run ~cargo build --release~ to compile the binary. You should have an environmental variable ~ELOG_LOGBOOK_HOME~ that points towards the directory containing all of you log books. You have several flags:
+#+begin_src sh
+  elog-covert logbook_name # by default it will pull all entries and fields and output to stdout
+  elog-covert logbook_name -r 30 40 # pull entries with id between 30 and 40
+  elog-covert logbook_name -l 23 24 123 # pull specified entries
+  elog-covert logbook_name -f Author Date # pull all entries but only output the Author and Date Columns.
+#+end_src
+
+* License
+GPLv3
