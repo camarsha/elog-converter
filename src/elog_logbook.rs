@@ -89,7 +89,7 @@ impl LogBook {
             }
         }
         // handle if there is just one entry
-        if entry_count == 1 {
+        if entry_count >= 1 {
             result.push(&lines[0..lines.len()]);
         }
         result
