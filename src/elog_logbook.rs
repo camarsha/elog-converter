@@ -88,9 +88,11 @@ impl LogBook {
                 start = i;
             }
         }
-        // handle if there is just one entry
-        if entry_count >= 1 {
+        // handle if there is just one entry and the last entry
+        if entry_count == 1 {
             result.push(&lines[0..lines.len()]);
+        } else if entry_count >= 1 {
+            result.push(&lines[start..lines.len()])
         }
         result
     }
